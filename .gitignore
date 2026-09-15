@@ -1,0 +1,44 @@
+# Private inputs and all generated artifacts (any format)
+.claude/skills/phd-application-assistant/01-candidate-profile.md
+.claude/skills/phd-scraper/search-queries.md
+/positions_tracker.csv
+documents/**
+!documents/README.md
+position_applications/
+position_reports/
+position_scraper/
+reports/
+generated/
+state/
+.state/
+.cache/
+logs/
+.env
+.env.*
+credentials/
+secrets/
+.secrets/
+.credentials/
+**/credentials
+**/credentials.*
+**/token.*
+**/tokens.*
+**/credentials*.json
+**/credentials*.yaml
+**/credentials*.yml
+**/token*.json
+**/secrets.*
+*.pem
+*.key
+.claude/settings.local.json
+*.tex.bak
+
+# Keep the folder layout
+!documents/**/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+__pycache__/
+*.pyc

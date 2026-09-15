@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch",
+      "Write",
+      "Edit",
+      "Bash(python .agents/skills/openalex-lab-search/cli/search.py:*)",
+      "Bash(python .agents/skills/bsky-position-search/cli/search.py:*)",
+      "Bash(python tools/phd_key.py:*)",
+      "Bash(bun --version)",
+      "Bash(python --version)"
+    ]
+  }
+}
