@@ -61,8 +61,9 @@ class KeyTests(unittest.TestCase):
         self.assertEqual(key.key_for("caf\u00e9", "t", ""), key.key_for("cafe\u0301", "t", ""))
 
     def test_audit_invalid_json(self):
-        with patch.object(key.os.path, "exists", return_value=True):
-            with patch("builtins.open", return_value=io.StringIO("{")):
+        with patch.object(key, "os") as mocked_os:
+            mocked_os.path.exists.return_value = True
+            with patch.object(key, "open", return_value=io.StringIO("{"), create=True):
                 status, stdout, stderr = invoke(key, "--audit")
         self.assertEqual(status, 1)
         self.assertEqual(stdout, "")
